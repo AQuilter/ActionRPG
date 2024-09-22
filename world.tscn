@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://n3xmwu0k7hsr"]
+[gd_scene load_steps=4 format=3 uid="uid://n3xmwu0k7hsr"]
 
+[ext_resource type="Texture2D" uid="uid://cp4eooikvooid" path="res://World/GrassBackground.png" id="1_nky7y"]
 [ext_resource type="PackedScene" uid="uid://b0khsl1hadc1w" path="res://Player/player.tscn" id="2_o7sbn"]
 [ext_resource type="PackedScene" uid="uid://rcoylbv8wjhv" path="res://World/bush.tscn" id="2_vu4ps"]
 
 [node name="World" type="Node2D"]
 y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_repeat = 2
+texture = ExtResource("1_nky7y")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 320, 180)
 
 [node name="Player" parent="." instance=ExtResource("2_o7sbn")]
 position = Vector2(74, 34)
